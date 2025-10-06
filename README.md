@@ -54,7 +54,7 @@ ai-job-description-generator/
 ### 1. Clone and Install
 
 ```bash
-git clone <your-repo-url>
+git clone https://github.com/djkepa/ai-job-description-generator.git
 cd ai-job-description-generator
 npm install
 ```
@@ -286,5 +286,6 @@ MIT License - see [LICENSE](LICENSE) file for details.
 ---
 
 **Built with ❤️ to demonstrate senior-level full-stack development practices**
+
 
 *For questions about implementation details or architectural decisions, please refer to the comprehensive documentation in the `docs/` directory or examine the extensively commented codebase.*
