@@ -1,0 +1,206 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply bg-gradient-to-br from-slate-50 to-slate-100 text-slate-900 antialiased;
+  }
+}
+
+@layer components {
+  .appContainer {
+    @apply min-h-screen flex items-center justify-center p-4;
+  }
+
+  .contentWrapper {
+    @apply w-full max-w-4xl;
+  }
+
+  .header {
+    @apply text-center mb-8 sm:mb-12 px-2;
+  }
+
+  .mainTitle {
+    @apply text-3xl sm:text-4xl md:text-5xl font-bold text-slate-900 mb-3;
+  }
+
+  .subtitle {
+    @apply text-base sm:text-lg text-slate-600 px-2;
+  }
+
+  .mainContent {
+    @apply bg-white rounded-2xl shadow-xl p-6 sm:p-8 md:p-12;
+  }
+
+  .formContainer {
+    @apply space-y-6;
+  }
+
+  .formRow {
+    @apply grid grid-cols-1 sm:grid-cols-2 gap-4;
+  }
+
+  .selectWrapper {
+    @apply relative;
+  }
+
+  .selectIcon {
+    @apply absolute right-3 top-1/2 transform -translate-y-1/2 w-4 h-4 text-slate-400 pointer-events-none z-10;
+  }
+
+  .companyIcon {
+    @apply absolute left-3 top-1/2 transform -translate-y-1/2 z-20 pointer-events-none flex items-center justify-center;
+  }
+
+  .inputGroup {
+    @apply space-y-2;
+  }
+
+  .inputLabel {
+    @apply block text-sm font-semibold text-slate-700;
+  }
+
+  .inputField {
+    @apply w-full px-4 py-3 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-slate-100 disabled:cursor-not-allowed transition-colors;
+  }
+
+  .inputError {
+    @apply border-red-300 focus:ring-red-500;
+  }
+
+  .selectField {
+    @apply w-full px-4 py-3 pr-10 border border-slate-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-transparent disabled:bg-slate-100 disabled:cursor-not-allowed transition-colors bg-white appearance-none cursor-pointer;
+  }
+
+  .selectField.companySelect {
+    @apply pl-10;
+  }
+
+  .errorText {
+    @apply text-sm text-red-600;
+  }
+
+  .submitButton {
+    @apply w-full bg-blue-600 hover:bg-blue-700 disabled:bg-slate-400 disabled:cursor-not-allowed text-white font-semibold py-3 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  .resultContainer {
+    @apply space-y-6;
+  }
+
+  .resultHeader {
+    @apply flex flex-col lg:flex-row lg:items-start lg:justify-between gap-4;
+  }
+
+  .resultTitle {
+    @apply text-2xl font-bold text-slate-900;
+  }
+
+  .resultMeta {
+    @apply flex flex-wrap gap-2 sm:gap-3 mt-2 text-xs sm:text-sm text-slate-600 justify-center sm:justify-start;
+  }
+
+  .metaItem {
+    @apply bg-slate-100 px-2 py-1 rounded;
+  }
+
+  .resultActions {
+    @apply flex flex-col sm:flex-row gap-3 mt-4;
+  }
+
+  .copyButton {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-green-600 hover:bg-green-700 disabled:bg-green-400 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-green-500 focus:ring-offset-2;
+  }
+
+  .copyButton.copied {
+    @apply bg-green-700;
+  }
+
+  .resetButton {
+    @apply inline-flex items-center justify-center gap-2 px-4 py-2.5 bg-slate-600 hover:bg-slate-700 text-white font-medium rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-slate-500 focus:ring-offset-2;
+  }
+
+  .buttonIcon {
+    @apply w-4 h-4;
+  }
+
+  .resultContent {
+    @apply bg-slate-50 rounded-lg p-4 sm:p-6 border border-slate-200 space-y-4;
+  }
+
+  .resultText {
+    @apply text-slate-700 leading-relaxed whitespace-pre-wrap;
+  }
+
+  .resultStats {
+    @apply flex gap-4 text-sm text-slate-500 pt-4 border-t border-slate-200;
+  }
+
+  .errorMessage {
+    @apply flex items-start gap-3 p-4 bg-red-50 border border-red-200 rounded-lg text-red-800;
+  }
+
+  .errorIcon {
+    @apply w-5 h-5 flex-shrink-0 mt-0.5;
+  }
+
+  .errorContent {
+    @apply flex flex-col gap-1;
+  }
+
+  .errorTitle {
+    @apply font-semibold text-red-900;
+  }
+
+  .errorDetails {
+    @apply text-sm text-red-700;
+  }
+
+  .loadingMessage {
+    @apply flex items-center justify-center gap-3 p-8 text-slate-600;
+  }
+
+  .spinner {
+    @apply w-6 h-6 text-blue-600;
+    animation: spin 0.8s linear infinite;
+  }
+
+  .footer {
+    @apply text-center mt-8 text-sm text-slate-500 space-y-1;
+  }
+
+  .performanceInfo {
+    @apply text-xs text-slate-400 font-mono;
+  }
+
+  .errorFallback {
+    @apply min-h-screen flex items-center justify-center p-4 bg-gradient-to-br from-slate-50 to-slate-100;
+  }
+
+  .errorFallbackContent {
+    @apply max-w-md mx-auto text-center bg-white rounded-2xl shadow-xl p-8;
+  }
+
+  .errorFallbackIcon {
+    @apply mx-auto mb-4 text-red-500;
+  }
+
+  .errorFallbackTitle {
+    @apply text-2xl font-bold text-slate-900 mb-2;
+  }
+
+  .errorFallbackMessage {
+    @apply text-slate-600 mb-6 leading-relaxed;
+  }
+
+  .errorButton {
+    @apply bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded-lg transition-colors focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}

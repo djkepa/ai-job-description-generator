@@ -1,0 +1,11 @@
+#!/usr/bin/env sh
+. "$(dirname -- "$0")/_/husky.sh"
+
+# Run lint-staged for formatting and linting
+npx lint-staged
+
+# Type checking
+npm run type-check
+
+# Run tests (fast unit tests only)
+npm run test -- --passWithNoTests --silent --onlyChanged
